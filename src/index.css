@@ -1,0 +1,146 @@
+:root {
+  --maincolor: rgba(255, 255, 136, 0.7);
+  --border1: 	pink;
+  --displaycolor: pink;
+  --bg-gradient: linear-gradient(140deg,#772DB1,#F57850) /*--bg-gradient: linear-gradient(140deg,#772DB1,#F57850*/
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-gradient);
+  /*background-color: pink;*/
+  height: 100vh;
+}
+
+#calculator {
+  border: 1px solid var(--border1);
+  padding: 5px;
+  background-color: beige;
+}
+
+.numpad-buttons, .numpad-operations {
+  all: unset;
+  font-family: 'Noto Sans JP';
+  text-align: center;
+  background-color: rgba(255, 255, 136, 0.3);
+  font-weight: 600;
+  margin: 0.7px;
+  user-select: none;
+}
+
+.numpad-operations:hover, .numpad-buttons:hover {
+  background: linear-gradient(140deg, #c754ae,#dc6963);
+  border-radius: 5%;
+  color: beige;
+}
+
+#display {
+  font-family: 'Courier Prime';
+  grid-area: s;
+  background-color: var(--displaycolor);
+  border-left: 1px solid var(--border1);
+  border-right: 1px solid var(--border1);
+  border-bottom: 1px solid var(--border1);
+  text-align: right;
+  font-size: 27px;
+  padding: 0 5px 5px 0;
+  margin-bottom: 5px;
+  color: white;
+  background: linear-gradient(320deg, #c754ae,#dc6963);
+}
+
+#memory {
+  font-family: 'Courier Prime';
+  color: orange;
+  padding: 3px 3px 3px 5px;
+  grid-area: t;
+  background-color: var(--displaycolor);
+  text-align: right;
+  border-left: 1px solid var(--border1);
+  border-right: 1px solid var(--border1);
+  border-top: 1px solid var(--border1);
+  background: linear-gradient(220deg, #c754ae,#dc6963);
+  white-space: pre-wrap;      /* CSS3 */   
+  white-space: -moz-pre-wrap; /* Firefox */    
+  white-space: -pre-wrap;     /* Opera <7 */   
+  white-space: -o-pre-wrap;   /* Opera 7 */    
+  word-wrap: break-word;      /* IE */
+}
+
+#numpad-wrapper {
+  font-family: 'Courier Prime';
+  display: grid;
+  grid-template-areas:
+    "t t t t"
+    "s s s s"
+    "p p q r"
+    "a b c l"
+    "d e f m"
+    "g h i n"
+    "j j k o";
+  grid-template-columns: 65px 65px 65px 65px;
+  grid-template-rows: 35px 45px 55px 55px 55px 55px 55px;
+}
+
+#zero {
+  grid-area: j;
+}
+#one {
+  grid-area: g;
+}
+#two {
+  grid-area: h;
+}
+#three {
+  grid-area: i;
+}
+#four {
+  grid-area: d;
+}
+#five {
+  grid-area: e;
+}
+#six {
+  grid-area: f;
+}
+#seven {
+  grid-area: a;
+}
+#eight {
+  grid-area: b;
+}
+#nine {
+  grid-area: c;
+}
+#decimal {
+  grid-area: k;
+}
+#equals {
+  grid-area: o;
+  border: 0.5px solid pink;
+  border-radius: 5%;
+}
+#add {
+  grid-area: n
+}
+#subtract {
+  grid-area: m
+}
+#multiply {
+  grid-area: l
+}
+#divide {
+  grid-area: r
+}
+#clear {
+  grid-area: q;
+  border: 0.5px solid pink;
+  border-radius: 5%;
+}
+#clearEntry {
+ grid-area: p;
+ border: 0.5px solid pink;
+ border-radius: 5%;
+}
